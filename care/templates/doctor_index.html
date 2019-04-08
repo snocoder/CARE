@@ -1,0 +1,73 @@
+
+{% extends "doctor_base.html" %}
+
+{% block content %}
+
+{% if current_user.is_authenticated %}
+<br>
+
+<div class="container">
+  <p style="text-align: center; color: #1dd1a1; font-size: 1.5rem;" class="head-p">Hii Doctor {{current_user.username}}</p>
+  <hr>
+  <br>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card">
+        <h5 class="card-header bg-dark text-white">Add Report</h5>
+        <div class="card-body">
+          <h5 class="card-title">Add New Report To Patient</h5>
+          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+          <a href="#" class="btn btn-outline-success">Go somewhere</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card">
+        <h5 class="card-header bg-dark text-white">View Report</h5>
+        <div class="card-body">
+          <h5 class="card-title">View Reports Of Patient</h5>
+          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+          <a href="#" class="btn btn-outline-success">Go somewhere</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% else %}
+<div class="container">
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container header">
+      <h1 class="display-4">Care for Your Life</h1>
+      <p class="">Save your Medical reports on cloud in very secure way and get acces to it from anywhere anytime.</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-6 col-sm-12">
+      <div class="card" >
+        <div class="card-body">
+          <h5 class="card-title">For Doctor</h5>
+          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+          <a href="{{url_for('doctors.login')}}" class="btn btn-outline-success">Login</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6 col-sm-12">
+      <div class="card" >
+        <div class="card-body">
+          <h5 class="card-title">For patient</h5>
+          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+          <a href="{{url_for('users.login')}}" class="btn btn-outline-success">Login</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+{% endif %}
+
+
+{% endblock %}

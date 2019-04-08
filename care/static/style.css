@@ -1,0 +1,72 @@
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  padding-bottom: 6rem;
+  min-height: 100%;
+  color: gray;
+}
+
+
+
+
+.header{
+  text-align: center;
+  text-transform: uppercase;
+}
+.header h1{
+  color: #3D907A;
+}
+
+nav{
+  padding: 0 1rem !important;
+}
+
+.navbar-brand{
+  color: #3D907A !important;
+  font-size: 2rem;
+}
+
+
+/* @media (max-width: @screen-sm) {
+  .header{
+    font-size: 80%;
+  }
+} */
+
+.nav-link{
+    font-size: 1.3rem;
+}
+
+a{
+  text-decoration: none !important;
+  color: gray !important;
+}
+
+.btn:hover{
+  color: #fff !important;
+}
+
+.foot{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #efefef !important;
+  text-align: center;
+}
+
+.container{
+  margin-top: 3.6rem !important;
+}

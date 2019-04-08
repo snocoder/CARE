@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <div align="center">
+        <h2>Welcome {{current_user.username}}</h2>
+        <img align='center' class="rounded" width="300" src="{{url_for('static', filename='profile_pics/'+current_user.profile_image)}}" alt="profileimage">
+      </div>
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <form method="POST" enctype="multipart/form-data">
+        {{form.hidden_tag()}}
+        <div class="form-group">
+          {{form.username.label(class='form-group')}}
+          {{form.username(class='form-control')}}
+        </div>
+        <div class="form-group">
+          {{form.email.label(class='form-group')}}
+          {{form.email(class='form-control')}}
+        </div>
+        <div class="form-group">
+          {{form.picture.label(class='form-group')}}
+          {{form.picture(class='form-control')}}
+        </div>
+        <div class="form-group">
+          {{form.submit(class='btn btn-primary btn-md')}}
+        </div>
+
+      </form>
+    </div>
+
+  </div>
+</div>
+
+
+{% endblock %}
